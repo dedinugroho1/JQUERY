@@ -1,0 +1,20 @@
+<html>
+<head>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<form>
+		<p>Alamat 1 : <input type="text" id="inputbox1"></p>
+		<p>Alamat 2 (Isinya sama dengan alamat 1) : <input type="text" id="inputbox2"></p>
+		<input type="submit" value="Proses">
+	</form>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#inputbox1").keyup(function() {
+				var klonisasi = $(this).val();
+				$("#inputbox2").val(klonisasi);
+			});
+		});
+	</script>
+</html>

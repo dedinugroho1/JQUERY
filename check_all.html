@@ -1,0 +1,26 @@
+<html>
+<head>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<h4>Pilih Hobi Favorit Anda : </h4>
+	<fieldset>
+		<input type="checkbox" name="cek1"> Membaca<br>
+		<input type="checkbox" name="cek2"> Renang<br>
+		<input type="checkbox" name="cek3"> Nonton Film<br>
+		<input type="checkbox" name="cek4"> Travelling<br>
+		<input type="checkbox" name="cek5"> Musik<br><hr>
+		<input type="checkbox" id="ceksemua">Check All<br>
+	</fieldset>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		// ketika checkbox dengan id ceksemua diklik,
+		// maka semua checkbox akan tercentang.
+		$('#ceksemua').click(function(){
+			$(this).parents('fieldset:eq(0)').
+			find(':checkbox').attr('checked', this.checked);
+		});
+		});
+	</script>
+</html>
